@@ -667,6 +667,10 @@ video {
   margin-top: 42px;
 }
 
+.mt-24 {
+  margin-top: 6rem;
+}
+
 .block {
   display: block;
 }
@@ -853,6 +857,10 @@ video {
 
 .justify-center {
   justify-content: center;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .overflow-y-scroll {
@@ -1055,6 +1063,10 @@ video {
   padding: 3rem;
 }
 
+.p-6 {
+  padding: 1.5rem;
+}
+
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -1078,6 +1090,11 @@ video {
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .text-center {
@@ -1115,6 +1132,19 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-\[35px\] {
+  font-size: 35px;
+}
+
+.text-\[34px\] {
+  font-size: 34px;
 }
 
 .font-bold {
@@ -1188,6 +1218,11 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-slate-300 {
+  --tw-text-opacity: 1;
+  color: rgb(203 213 225 / var(--tw-text-opacity));
 }
 
 .underline {
