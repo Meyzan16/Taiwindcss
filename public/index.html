@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,11 +9,18 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
     <title>Belajar Tailwind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/style.css">
+    <style type="text/tailwindcss">
+        #toggle:checked ~ label div.toggle-circle 
+        {
+            @apply translate-x-4;
+        }
+    </style>
 </head> 
 <body class="dark:bg-slate-800 dark:text-slate-200">
         <!-- ukuran cetak tebal -->
-        <h1 class="text-8xl font-bold text-center my-10">
+        <h1 class="text-8xl font-bold text-center my-10 bg-gradient-to-r from-blue-50 to-teal-400 bg-clip-text text-transparent ">
         Mari belajar
            <span class="bg-gradient-to-r from-blue-500 to-teal-400  bg-clip-text text-transparent ">
              tailwind
@@ -27,7 +34,7 @@
                  -->
             <div class="mx-8">Margin</div>
             <div class="p-8">Padding</div>
-        </section>
+        </section>text-sm text-slate-500 mr-2
 
         <!-- padding -->
         <!-- width jika setengah maka akan menyesuaikan -->
@@ -73,22 +80,53 @@
 
         <hr class="my-10">
 
+        <div class="flex justify-center">
+            <span class="text-sm text-slate-500 mr-2">Light</span>
+            <input type="checkbox" id="toggle" class="hidden">
+
+            <label for="toggle">
+                <div class="w-9 h-5 bg-slate-500 rounded-full
+                cursor-pointer">
+                    <div class="w-5 h-5 flex items-center p-1
+                     bg-white rounded-full toggle-circle">
+                         
+                    </div>
+                </div>
+            </label>
+            <span class="text-sm text-slate-500 ml-2 ">Dark</span>
+        </div>
+
         <!-- display block untuk button agar ketengah -->
         <!-- focus -->
-        <button class="my-10 bg-sky-500  py-2 px-5 mx-auto block font-inter font-semibold rounded-full text-white hover:bg-sky-700
-            active:bg-sky-800 ">
+        <button class="my-10 bg-sky-500  py-2 px-5 mx-auto block font-inter 
+        font-semibold rounded-full text-white hover:bg-sky-700
+            active:bg-sky-800 dark:bg-slate-300 dark:text-slate-800
+             dark:hover:text-slate-900
+             dark:hover:bg-slate-100">
             Simpan
         </button>
 
         <!-- grouping = ketika group yang dihover apa yang terjadi didalam element nya -->
         <!-- x= horizontal y = vertikal  -->
-        <div class="max-w-lg  my-10 border p-5 shadow-md font-inter group border-slate-200 mx-auto 
-        rounded-lg hover:bg-sky-400 font-serif">
-            <h5 class="font-bold text-slate-700 text-2xl mb-3 group-hover:text-white">MyCard</h5>
+        <div class="max-w-lg  my-10 border p-5 shadow-md 
+                        font-inter group 
+                        border-slate-200 mx-auto 
+                        rounded-lg 
+                        hover:bg-sky-400 font-serif 
+                        dark:hover:bg-slate-300">
+            <h5 class="font-bold text-slate-700 text-2xl mb-3
+                    group-hover:text-white 
+                    dark:group-hover:text-slate-800">MyCard
+            </h5>
             <p class="text-slate-600 group-hover:text-white
-            selection:bg-lime-200 selection:text-slate-900
-                first-line:uppercase first-line:tracking-widest first-letter:text-7xl
-                first-letter:float-left first-letter:mr-3">
+                selection:bg-lime-200
+                selection:text-slate-900
+                first-line:uppercase 
+                first-line:tracking-widest 
+                first-letter:text-7xl
+                first-letter:float-left 
+                first-letter:mr-3
+                dark:group-hover:text-slate-800">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium porro ducimus facere, enim illum eos ex sunt molestiae, consequuntur pariatur rem repudiandae fugit nostrum. Sequi soluta sapiente minus molestiae eaque.</p>
         </div>
 
@@ -96,22 +134,41 @@
             <form action="">
                 <label for="email">
                     <span class="block mb-2 font-semibold
-                     text-slate-700
-                     after:content-['*'] after:text-pink-500 after:ml-0.5">Email </span>
-                    <input id="email" class="px-3 py-2 border shadow rounded w-full
-                    block text-sm focus:outline-none focus:ring-1
-                     focus:ring-sky-500 focus:border-sky-500
-                     invalid:text-pink-700 invalid:focus:ring-pink-700
-                     invalid:focus:border-pink-700
-                     peer" 
+                        text-slate-700
+                        after:content-['*'] 
+                        after:text-pink-500 
+                        after:ml-0.5">Email 
+                    </span>
+                    <input id="email" class="px-3 py-2 border 
+                            shadow rounded w-full
+                            block text-sm 
+                            focus:outline-none focus:ring-1
+                            focus:ring-sky-500 focus:border-sky-500
+                            invalid:text-pink-700 
+                            invalid:focus:ring-pink-700
+                            invalid:focus:border-pink-700
+                            peer" 
                      type="email" placeholder="masukan email" 
                     >
+                    <!-- fungsi peer belahan atau digunakan saat memenuculkan invalid -->
+
                     <!-- invisible menyembunyikan  -->
-                    <p class="mt-1 text-sm text-pink-700 invisible peer-invalid:visible">email tidak valid</p>
+                    <p class="mt-1 text-sm text-pink-700 
+                    invisible peer-invalid:visible">email tidak valid</p>
                 </label>
             </form>
         </div>
 
         <div class="mb-96"></div>
+
+        <script>
+            const  checkbox = document.querySelector('#toggle');
+            const html = document.querySelector('html');
+
+            checkbox.addEventListener('click', function()
+            {
+                checkbox.checked ? html.classList.add('dark') : html.classList.remove('dark');
+            })
+        </script>
 </body>
 </html>
