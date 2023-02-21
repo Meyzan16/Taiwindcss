@@ -249,35 +249,44 @@
         <!-- responsive website dengan menambahan sm, md, lg, xl, 2xl -->
 
         <!-- sm:bg-red-200 md:bg-transparent -->
-        <div class="container px-6 font-inter max-w-md mx-auto sm:max-w-xl md:max-w-5xl">
-            <h3 class="text-4xl font-bold text-slate-800 sm:text-5xl md:text-7xl">Meyzan 
-                    <span class="text-sky-500">
-                        Al Yutra
-                    </span>
-            </h3>
-            <!-- biar ga kketarik dibaut cover object -->
-            <img class="mt-4 rounded-xl shadow-xl sm:mt-6 sm:h-60 w-full
-                sm:object-cover sm:object-center" 
-            src="https://source.unsplash.com/1280x960?computer" alt="leptop">
-            <h2 class="mt-6 text-2xl font-semibold text-slate-800 sm:mt-8">Mari belajar tailwind</h2>
-            <p class="mt-2 text-slate-600 sm:mt-4 sm:text-xl">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Dolore maxime ut labore dolorem laborum neque, 
-                quibusdam suscipit commodi delectus dolor nesciunt. 
-                Libero, nobis dolore recusandae quaerat inventore vitae odio totam,
-                 temporibus cum iste porro harum eaque, voluptates sit expedita est.
-            </p>
-            <!-- tracking : jarak antar kata -->
-            <div class="mt-4 sm:mt-6 ">
-                <a href="#" class="inline-block px-5 py-3 bg-red-600
-                 text-slate-900 
-                 hover:text-white hover:bg-sky-600
-                rounded-full shadow-lg 
-                uppercase font-semibold
-                 tracking-wider text-sm sm:text-base">
-                    Suscribe Channel Youtube
-                </a>
+        <!-- fungsi flex type display mengelola layout -->
+        <div class="container px-6 font-inter max-w-md mx-auto 
+        sm:max-w-xl md:max-w-5xl lg:flex lg:max-w-full lg:p-0">
+            <!-- p untuk padding ke segala sisi -->
+            <div class="lg:p-12 lg:flex-1">
+                <h3 class="text-4xl font-bold text-slate-800 sm:text-5xl md:text-7xl">Meyzan 
+                        <span class="text-sky-500">
+                            Al Yutra
+                        </span>
+                </h3>
+                <!-- biar ga kketarik dibaut cover object -->
+                <img  src="https://source.unsplash.com/1280x960?computer" class="mt-4 rounded-xl shadow-xl sm:mt-6 sm:h-60 w-full
+                    sm:object-cover sm:object-center lg:hidden" 
+                alt="leptop">
+                <h2 class="mt-6 text-2xl font-semibold text-slate-800 sm:mt-8">Mari belajar tailwind</h2>
+                <p class="mt-2 text-slate-600 sm:mt-4 sm:text-xl">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Dolore maxime ut labore dolorem laborum neque, 
+                    quibusdam suscipit commodi delectus dolor nesciunt. 
+                    Libero, nobis dolore recusandae quaerat inventore vitae odio totam,
+                    temporibus cum iste porro harum eaque, voluptates sit expedita est.
+                </p>
+                <!-- tracking : jarak antar kata -->
+                <div class="mt-4 sm:mt-6 ">
+                    <a href="#" class="inline-block px-5 py-3 bg-red-600
+                    text-slate-900 
+                    hover:text-white hover:bg-sky-600
+                    rounded-full shadow-lg 
+                    uppercase font-semibold
+                    tracking-wider text-sm sm:text-base">
+                        Suscribe Channel Youtube
+                    </a>
+                </div>
             </div>
+            <div  class="hidden lg:flex lg:w-1/2 ">
+                <img  src="https://source.unsplash.com/1280x960?computer" class="object-cover rounded-l-full w-full h-[78%]" alt="leptop">
+            </div>
+
         </div>
 
         <div class="mb-96"></div>
