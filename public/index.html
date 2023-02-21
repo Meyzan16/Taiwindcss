@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -98,8 +98,10 @@
 
         <!-- display block untuk button agar ketengah -->
         <!-- focus -->
-        <button class="my-10 bg-sky-500  py-2 px-5 mx-auto block font-inter 
-        font-semibold rounded-full text-white hover:bg-sky-700
+        <button class="my-10 bg-sky-500  py-2 px-5
+         mx-auto block font-inter 
+        font-semibold rounded-full text-white
+         hover:bg-sky-700
             active:bg-sky-800 dark:bg-slate-300 dark:text-slate-800
              dark:hover:text-slate-900
              dark:hover:bg-slate-100">
@@ -184,8 +186,62 @@
         <!-- animasi -->
         <div class="w-40 h-40 bg-pink-500 mx-auto mt-20 rounded-lg
             shadow-lg animate-goyang">
-        
         </div>
+
+        <hr class="my-20 border-4">
+
+        <!-- container -->
+        <!-- float agar teks mengelilingi gambar  -->
+        <!-- ketika membuat gambar absolute maka 
+            dikeluar dari halaman atau element maka pembungkus nya nya di buat ralative -->
+        <div class="container px-5 mx-auto">
+            <div class="border rounded-lg shadow-lg p-10 
+            relative ">
+                <div class="w-10 h-10 flex bg-pink-400 
+                rounded-full absolute 
+                -top-3 
+                left-1/2
+                -translate-x-1/2">
+                    <span class="m-auto">
+                        ⬆️
+                    </span>
+                </div>
+                <img src="./img/1.jfif" alt="laptop" width="150" class="float-left mr-4">
+                <p>Lorem, ipsum dolor sit amet consectetur 
+                adipisicing elit. Impedit iure nisi 
+                dignissimos exercitationem consectetur!
+                 Labore, repellat, esse maiores non, 
+                 repudiandae saepe quos placeat a soluta 
+                 rem distinctio doloribus perspiciatis nemo 
+                 hic corrupti optio? Nostrum quas laudantium,
+                  eum accusantium consequuntur necessitatibus 
+                  ut quis dolore esse commodi libero, 
+                  sapiente odio aspernatur explicabo.</p>
+            </div>
+
+        </div>
+
+        <div class="container px-5 mx-auto">
+              <div class="border rounded-lg shadow-lg
+              p-10  mt-20 columns-3">
+                <img src="./img/1.jfif" alt="Image" class="mb-4">
+                <img src="./img/1.jfif" alt="Image" class="mb-4">
+                <img src="./img/1.jfif" alt="Image" class="mb-4">
+                <img src="./img/1.jfif" alt="Image" class="mb-4">
+                <img src="./img/1.jfif" alt="Image" class="mb-4">
+                <img src="./img/1.jfif" alt="Image" class="mb-4">
+              </div>
+        </div>
+
+  
+        <!-- smooth scroll -->
+        <div class="w-10 h-10 flex bg-pink-400 
+                rounded-full fixed flex bottom-5 right-5">
+                    <a href="#" class=" text-xl m-auto">
+                        ⬆️
+                    </a>
+        </div>
+   
         
 
         <div class="mb-96"></div>
