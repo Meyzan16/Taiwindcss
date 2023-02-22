@@ -301,7 +301,7 @@
         <!-- buat card -->
         <!-- default block -->
         <!-- ketika sm dan udah full jangan maksa kesamping maka gunakan fles-wrap -->
-        <!-- kalo mau jarak perilaku flex gunakan gap -->
+        <!-- kalo mau jarak perilaku flex atau jarak anatar kolom gunakan gap -->
         <!-- justify-evenly untuk buat agar sisinya sama semuanya -->
         <div class="container mx-auto px-6 sm:justify-evenly
          font-inter sm:flex sm:flex-wrap sm:gap-8">
@@ -365,9 +365,125 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, veniam?</p>
                 </div>
             </div>
-           
-          
         </div>
+
+        <!-- creaete grid -->
+        <!-- mengubah judul dibahwa menggunakan flex -->
+        <div class="font-inter mt-64 p-2 grid grid-cols-2 gap-2
+            md:grid-cols-4 md:p-4">
+            <h2 class="text-xl h-15 font-semibold text-slate-700
+                md:col-start-4 md:row-start-2 md:flex">
+                <span class="self-center">
+                    Wellcome Tailwind
+                </span> 
+            </h2>
+            <div class="h-15 text-lg text-slate-600 font-bold
+                md:col-start-2 md:row-start-2  flex">
+                <span class="self-end">
+                    @Meyzan Al Yutra
+                </span>
+            </div>
+
+            <!-- untuk membuat animasi maka dikasih group element -->
+            <!-- fungsi grup untuk menarger anak anak dari element paraemnt -->
+            <div class="bg-blue-500 h-15 aspect-[4/3] rounded-lg md:aspect-[3/4] 
+            lg:aspect-[4/3] xl:aspect-[4/4] overflow-hidden group relative hover:scale-95 transition-all duration-500">
+                <div class="w-full h-full bg-[url('https://source.unsplash.com/600x400?computer')] 
+                    bg-cover bg-center absolute group-hover:scale-125
+                    transition-all duration-500
+                    group-hover:rotate-12">
+
+                </div>
+            </div>
+            
+            <div class="bg-blue-500 h-15 aspect-[4/3] rounded-lg md:aspect-[3/4] lg:aspect-[4/3] xl:aspect-[4/4] md:col-start-3
+            overflow-hidden group relative hover:scale-95 transition-all duration-500">
+                <div class="w-full h-full bg-[url('https://source.unsplash.com/600x400?internet')] 
+                bg-cover bg-center absolute group-hover:scale-125
+                transition-all duration-500
+                group-hover:rotate-12">
+
+            </div>
+            </div>
+            
+            <div class="bg-blue-500 h-15 aspect-[4/3] rounded-lg md:aspect-[3/4] lg:aspect-[4/3] xl:aspect-[4/4]
+            overflow-hidden group relative hover:scale-95 transition-all duration-500">
+                <div class="w-full h-full bg-[url('https://source.unsplash.com/600x400?computer')] 
+                bg-cover bg-center absolute group-hover:scale-125
+                transition-all duration-500
+                group-hover:rotate-12">
+
+            </div>
+            </div>
+            <div class="bg-blue-500 h-15 aspect-[4/3] rounded-lg md:aspect-[3/4] lg:aspect-[4/3] xl:aspect-[4/4]
+            overflow-hidden group relative hover:scale-95 transition-all duration-500">
+                <div class="w-full h-full bg-[url('https://source.unsplash.com/600x400?laptop')] 
+                bg-cover bg-center absolute group-hover:scale-125
+                transition-all duration-500
+                group-hover:rotate-12">
+
+            </div>
+            </div>
+            <div class="bg-blue-500 h-15 aspect-[4/3] rounded-lg md:aspect-[3/4] lg:aspect-[4/3] xl:aspect-[4/4]
+            overflow-hidden group relative hover:scale-95 transition-all duration-500">
+                <div class="w-full h-full bg-[url('https://source.unsplash.com/600x400?computer')] 
+                bg-cover bg-center absolute group-hover:scale-125
+                transition-all duration-500
+                group-hover:rotate-12">
+
+            </div>
+            </div>
+            
+            <div class="bg-blue-500 h-15 aspect-[4/3] rounded-lg md:aspect-[3/4] lg:aspect-[4/3] xl:aspect-[4/4] md:col-start-2
+            overflow-hidden group relative hover:scale-95 transition-all duration-500">
+                <div class="w-full h-full bg-[url('https://source.unsplash.com/600x400?laptop')] 
+                bg-cover bg-center absolute group-hover:scale-125
+                transition-all duration-500
+                group-hover:rotate-12">
+
+            </div>
+            </div>
+            
+            <div class="bg-blue-500 h-15 aspect-[4/3] rounded-lg md:aspect-[3/4] lg:aspect-[4/3] xl:aspect-[4/4] md:col-start-4
+            overflow-hidden group relative hover:scale-95 transition-all duration-500">
+                <div class="w-full h-full bg-[url('https://source.unsplash.com/600x400?computer')] 
+                bg-cover bg-center absolute group-hover:scale-125
+                transition-all duration-500
+                group-hover:rotate-12">
+
+            </div>
+            </div>
+
+            <div class="bg-blue-500 h-15 aspect-[4/3] rounded-lg md:aspect-[3/4] lg:aspect-[4/3] xl:aspect-[4/4]
+            overflow-hidden group relative hover:scale-95 transition-all duration-500">
+                <div class="w-full h-full bg-[url('https://source.unsplash.com/600x400?laptop')] 
+                bg-cover bg-center absolute group-hover:scale-125
+                transition-all duration-500
+                group-hover:rotate-12">
+
+            </div>
+            </div>
+            <div class="bg-blue-500 h-15 aspect-[4/3] rounded-lg md:aspect-[3/4] lg:aspect-[4/3] xl:aspect-[4/4] md:col-start-3
+            overflow-hidden group relative hover:scale-95 transition-all duration-500">
+                <div class="w-full h-full bg-[url('https://source.unsplash.com/600x400?computer')] 
+                bg-cover bg-center absolute group-hover:scale-125
+                transition-all duration-500
+                group-hover:rotate-12">
+
+            </div>
+            </div>
+            <div class="bg-blue-500 h-15 aspect-[4/3] rounded-lg md:aspect-[3/4] lg:aspect-[4/3] xl:aspect-[4/4] md:col-start-3
+            overflow-hidden group relative hover:scale-95 transition-all duration-500">
+                <div class="w-full h-full bg-[url('https://source.unsplash.com/600x400?laptop')] 
+                bg-cover bg-center absolute group-hover:scale-125
+                transition-all duration-500
+                group-hover:rotate-12">
+
+            </div>
+            </div>
+        </div>
+
+        
 
         <div class="mb-96"></div>
 
