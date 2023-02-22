@@ -251,25 +251,27 @@
         <!-- sm:bg-red-200 md:bg-transparent -->
         <!-- fungsi flex type display mengelola layout -->
         <div class="container px-6 font-inter max-w-md mx-auto 
-        sm:max-w-xl md:max-w-5xl lg:flex lg:max-w-full lg:p-0">
+        sm:max-w-xl md:max-w-5xl lg:flex lg:max-w-full lg:p-0 bg-slate-500">
             <!-- p untuk padding ke segala sisi -->
-            <div class="lg:p-12 lg:flex-1">
-                <h3 class="text-[34px] font-bold text-slate-800 sm:text-5xl md:text-7xl">Meyzan 
+            <div class="lg:p-12 lg:flex-1 md:my-10 lg:my-20 ">
+                <h3 class="font-bold text-slate-800 text-[34px]  sm:text-4xl md:text-7xl  ">
+                    Meyzan 
                         <span class="text-sky-500">
                             Al Yutra
                         </span>
                 </h3>
                 <!-- biar ga kketarik dibaut cover object -->
-                <img  src="https://source.unsplash.com/1280x960?computer" class="mt-4 rounded-xl shadow-xl sm:mt-6 sm:h-60 w-full
+                <img  src="https://source.unsplash.com/1280x960?computer" 
+                class="mt-4 rounded-xl shadow-xl w-full sm:mt-6 sm:h-60
                     sm:object-cover sm:object-center lg:hidden" 
                 alt="leptop">
                 <h2 class="mt-6 text-2xl font-semibold text-slate-800 sm:mt-8">Mari belajar tailwind</h2>
-                <p class="mt-2 text-slate-600 sm:mt-4 sm:text-xl">
+                <p class="mt-2 text-slate-600 sm:mt-4 sm:text-xl md:text-lg">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Dolore maxime ut labore dolorem laborum neque, 
-                    quibusdam suscipit commodi delectus dolor nesciunt. 
-                    Libero, nobis dolore recusandae quaerat inventore vitae odio totam,
-                    temporibus cum iste porro harum eaque, voluptates sit expedita est.
+                    lorem50
+                    
+
+                    
                 </p>
                 <!-- tracking : jarak antar kata -->
                 <div class="mt-4 sm:mt-6 ">
@@ -283,17 +285,30 @@
                     </a>
                 </div>
             </div>
+            <!-- ketika di large maka tampilkan gambar yan dibawah -->
             <div  class="hidden lg:flex lg:w-1/2 ">
-                <img  src="https://source.unsplash.com/1280x960?computer" class="object-cover rounded-l-full w-full h-[78%]" alt="leptop">
+                <img  src="https://source.unsplash.com/1280x960?computer" 
+                class="object-cover rounded-l-full my-20 w-full " alt="leptop">
             </div>
         </div>
+
+
 
         <h2 class="mt-24  mb-10 text-center font-bold font-semibold text-3xl text-slate-700">
             MyGallery
         </h2>
-        <!-- overflow hidden  -->
-        <div class="container mx-auto px-6 font-inter ">
-            <div class="rounded-lg shadow-lg overflow-hidden mb-2">
+        <!-- jika gambar nya bablas maka gunakan overflow hidden  -->
+        <!-- buat card -->
+        <!-- default block -->
+        <!-- ketika sm dan udah full jangan maksa kesamping maka gunakan fles-wrap -->
+        <!-- kalo mau jarak perilaku flex gunakan gap -->
+        <!-- justify-evenly untuk buat agar sisinya sama semuanya -->
+        <div class="container mx-auto px-6 sm:justify-evenly
+         font-inter sm:flex sm:flex-wrap sm:gap-8">
+
+            <div class="rounded-lg shadow-lg overflow-hidden 
+            mb-10 sm:mb-0
+            sm:w-64 md:w-80  lg:w-72">
                 <img src="https://source.unsplash.com/600x400?computer" alt="Image Caption" 
                 class="w-full">
                 <div class="px-6 py-4">
@@ -303,7 +318,9 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, veniam?</p>
                 </div>
             </div>
-            <div class="rounded-lg shadow-lg overflow-hidden mb-2 ">
+
+            <div class="rounded-lg shadow-lg overflow-hidden mb-10 sm:mb-0
+            sm:w-64 md:w-80 lg:w-72">
                 <img src="https://source.unsplash.com/600x400?computer" alt="Image Caption" 
                 class="w-full">
                 <div class="px-6 py-4">
@@ -313,7 +330,9 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, veniam?</p>
                 </div>
             </div>
-            <div class="rounded-lg shadow-lg overflow-hidden mb-2">
+
+            <div class="rounded-lg shadow-lg overflow-hidden mb-10 sm:mb-0
+            sm:w-64 md:w-80 lg:w-72">
                 <img src="https://source.unsplash.com/600x400?computer" alt="Image Caption" 
                 class="w-full">
                 <div class="px-6 py-4">
@@ -323,6 +342,31 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, veniam?</p>
                 </div>
             </div>
+            
+            <div class="rounded-lg shadow-lg overflow-hidden mb-10 sm:mb-0
+            sm:w-64 md:w-80 lg:w-72">
+                <img src="https://source.unsplash.com/600x400?computer" alt="Image Caption" 
+                class="w-full">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2 text-slate-700">
+                        Image Title
+                    </div class="text-sm text-slate-600">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, veniam?</p>
+                </div>
+            </div>
+            <div class="rounded-lg shadow-lg overflow-hidden mb-10 sm:mb-0
+            sm:w-64 md:w-80 lg:w-72">
+                <img src="https://source.unsplash.com/600x400?computer" alt="Image Caption" 
+                class="w-full">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2 text-slate-700">
+                        Image Title
+                    </div class="text-sm text-slate-600">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, veniam?</p>
+                </div>
+            </div>
+           
+          
         </div>
 
         <div class="mb-96"></div>
