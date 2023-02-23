@@ -419,6 +419,14 @@ video {
   display: none;
 }
 
+h1 {
+  font-size: 3.75rem;
+  line-height: 1;
+  --tw-text-opacity: 1;
+  color: rgb(186 218 85 / var(--tw-text-opacity));
+  /* color: theme(colors.wpu); */
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -547,6 +555,62 @@ video {
   }
 }
 
+.grid-card {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
+
+.grid-card:hover {
+  --tw-scale-x: .95;
+  --tw-scale-y: .95;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@media (min-width: 768px) {
+  .grid-card {
+    aspect-ratio: 3/4;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-card {
+    aspect-ratio: 4/3;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .grid-card {
+    aspect-ratio: 4/4;
+  }
+}
+
+.grid-card-img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
+
+.group:hover .grid-card-img {
+  --tw-rotate: 12deg;
+  --tw-scale-x: 1.25;
+  --tw-scale-y: 1.25;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .invisible {
   visibility: hidden;
 }
@@ -585,10 +649,6 @@ video {
 
 .m-auto {
   margin: auto;
-}
-
-.m-20 {
-  margin: 5rem;
 }
 
 .mx-8 {
@@ -671,12 +731,12 @@ video {
   margin-top: 1.5rem;
 }
 
-.mt-\[42px\] {
-  margin-top: 42px;
-}
-
 .mt-64 {
   margin-top: 16rem;
+}
+
+.mt-\[42px\] {
+  margin-top: 42px;
 }
 
 .block {
@@ -697,14 +757,6 @@ video {
 
 .hidden {
   display: none;
-}
-
-.aspect-square {
-  aspect-ratio: 1 / 1;
-}
-
-.aspect-\[4\/3\] {
-  aspect-ratio: 4/3;
 }
 
 .h-10 {
@@ -735,20 +787,8 @@ video {
   height: 200px;
 }
 
-.h-\[78\%\] {
-  height: 78%;
-}
-
 .h-full {
   height: 100%;
-}
-
-.h-\[80\%\] {
-  height: 80%;
-}
-
-.h-20 {
-  height: 5rem;
 }
 
 .min-h-screen {
@@ -851,8 +891,16 @@ video {
   justify-content: space-evenly;
 }
 
-.gap-2 {
-  gap: 0.5rem;
+.gap-4 {
+  gap: 1rem;
+}
+
+.self-end {
+  align-self: flex-end;
+}
+
+.self-center {
+  align-self: center;
 }
 
 .overflow-hidden {
@@ -982,19 +1030,16 @@ video {
   background-color: rgb(254 240 138 / var(--tw-bg-opacity));
 }
 
-.bg-red-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
+.bg-\[url\(\'https\:\/\/source\.unsplash\.com\/600x400\?computer\'\)\] {
+  background-image: url('https://source.unsplash.com/600x400?computer');
 }
 
-.bg-slate-50 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(248 250 252 / var(--tw-bg-opacity));
+.bg-\[url\(\'https\:\/\/source\.unsplash\.com\/600x400\?internet\'\)\] {
+  background-image: url('https://source.unsplash.com/600x400?internet');
 }
 
-.bg-blue-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+.bg-\[url\(\'https\:\/\/source\.unsplash\.com\/600x400\?laptop\'\)\] {
+  background-image: url('https://source.unsplash.com/600x400?laptop');
 }
 
 .bg-gradient-to-r {
@@ -1047,16 +1092,16 @@ video {
   padding: 2.5rem;
 }
 
+.p-2 {
+  padding: 0.5rem;
+}
+
 .p-5 {
   padding: 1.25rem;
 }
 
 .p-8 {
   padding: 2rem;
-}
-
-.p-2 {
-  padding: 0.5rem;
 }
 
 .px-3 {
@@ -1087,11 +1132,6 @@ video {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
-}
-
-.px-8 {
-  padding-left: 2rem;
-  padding-right: 2rem;
 }
 
 .text-center {
@@ -1130,6 +1170,11 @@ video {
   font-size: 34px;
 }
 
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -1137,11 +1182,6 @@ video {
 
 .text-xl {
   font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
-.text-lg {
-  font-size: 1.125rem;
   line-height: 1.75rem;
 }
 
@@ -1264,6 +1304,15 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
+
+#toggle:checked ~ label div.toggle-circle {
+  --tw-translate-x: 1rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+/* mengurutkan sesuai layer base agar memliki style dasar */
+
+/* untuk class yang berulang ulang maka silahkan membuat component */
 
 .first-letter\:float-left::first-letter {
   float: left;
@@ -1484,6 +1533,10 @@ video {
 }
 
 @media (min-width: 640px) {
+  .sm\:mb-0 {
+    margin-bottom: 0px;
+  }
+
   .sm\:mt-4 {
     margin-top: 1rem;
   }
@@ -1494,18 +1547,6 @@ video {
 
   .sm\:mt-8 {
     margin-top: 2rem;
-  }
-
-  .sm\:mr-2 {
-    margin-right: 0.5rem;
-  }
-
-  .sm\:mb-0 {
-    margin-bottom: 0px;
-  }
-
-  .sm\:mt-1 {
-    margin-top: 0.25rem;
   }
 
   .sm\:flex {
@@ -1528,16 +1569,8 @@ video {
     flex-wrap: wrap;
   }
 
-  .sm\:justify-center {
-    justify-content: center;
-  }
-
   .sm\:justify-evenly {
     justify-content: space-evenly;
-  }
-
-  .sm\:gap-2 {
-    gap: 0.5rem;
   }
 
   .sm\:gap-8 {
@@ -1547,11 +1580,6 @@ video {
   .sm\:bg-red-200 {
     --tw-bg-opacity: 1;
     background-color: rgb(254 202 202 / var(--tw-bg-opacity));
-  }
-
-  .sm\:bg-white {
-    --tw-bg-opacity: 1;
-    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   }
 
   .sm\:object-cover {
@@ -1564,23 +1592,9 @@ video {
        object-position: center;
   }
 
-  .sm\:p-8 {
-    padding: 2rem;
-  }
-
-  .sm\:px-10 {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-  }
-
-  .sm\:px-12 {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
-
-  .sm\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
+  .sm\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 
   .sm\:text-base {
@@ -1592,21 +1606,23 @@ video {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
-
-  .sm\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
 }
 
 @media (min-width: 768px) {
-  .md\:m-60 {
-    margin: 15rem;
+  .md\:col-start-2 {
+    grid-column-start: 2;
   }
 
-  .md\:my-60 {
-    margin-top: 15rem;
-    margin-bottom: 15rem;
+  .md\:col-start-3 {
+    grid-column-start: 3;
+  }
+
+  .md\:col-start-4 {
+    grid-column-start: 4;
+  }
+
+  .md\:row-start-2 {
+    grid-row-start: 2;
   }
 
   .md\:my-10 {
@@ -1614,32 +1630,12 @@ video {
     margin-bottom: 2.5rem;
   }
 
-  .md\:mt-0 {
-    margin-top: 0px;
-  }
-
-  .md\:mt-10 {
-    margin-top: 2.5rem;
-  }
-
-  .md\:mt-60 {
-    margin-top: 15rem;
-  }
-
-  .md\:mt-8 {
-    margin-top: 2rem;
-  }
-
-  .md\:aspect-\[3\/4\] {
-    aspect-ratio: 3/4;
+  .md\:flex {
+    display: flex;
   }
 
   .md\:w-80 {
     width: 20rem;
-  }
-
-  .md\:w-full {
-    width: 100%;
   }
 
   .md\:max-w-5xl {
@@ -1658,33 +1654,14 @@ video {
     padding: 1rem;
   }
 
-  .md\:py-12 {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-
   .md\:text-7xl {
     font-size: 4.5rem;
     line-height: 1;
   }
 
-  .md\:text-6xl {
-    font-size: 3.75rem;
-    line-height: 1;
-  }
-
-  .md\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
-
   .md\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
-  }
-
-  .md\:text-\[\] {
-    color: ;
   }
 }
 
@@ -1692,14 +1669,6 @@ video {
   .lg\:my-20 {
     margin-top: 5rem;
     margin-bottom: 5rem;
-  }
-
-  .lg\:mt-20 {
-    margin-top: 5rem;
-  }
-
-  .lg\:mt-40 {
-    margin-top: 10rem;
   }
 
   .lg\:flex {
@@ -1712,10 +1681,6 @@ video {
 
   .lg\:w-1\/2 {
     width: 50%;
-  }
-
-  .lg\:w-7 {
-    width: 1.75rem;
   }
 
   .lg\:w-72 {
@@ -1737,20 +1702,9 @@ video {
   .lg\:p-12 {
     padding: 3rem;
   }
-
-  .lg\:py-12 {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-
-  .lg\:py-20 {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  }
 }
 
-@media (min-width: 1280px) {
-  .xl\:aspect-\[4\/3\] {
-    aspect-ratio: 4/3;
-  }
-}
+
+
+
+

@@ -1,11 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: 'class',
   content: ['./public/**/*.{html,js}'],
+  darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {
         inter:['Inter']
+      },
+      colors :
+      {
+        wpu: '#bada55',
       },
       animation: {
         'spin-slow' : 'spin 3s linear infinite',

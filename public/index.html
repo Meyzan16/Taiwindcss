@@ -9,14 +9,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
     <title>Belajar Tailwind</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <link rel="stylesheet" href="css/style.css">
-    <style type="text/tailwindcss">
-        #toggle:checked ~ label div.toggle-circle 
-        {
-            @apply translate-x-4;
-        }
-    </style>
+  
 </head> 
 <body class="dark:bg-slate-800 dark:text-slate-200">
         <!-- ukuran cetak tebal -->
@@ -369,8 +364,8 @@
 
         <!-- creaete grid -->
         <!-- mengubah judul dibahwa menggunakan flex -->
-        <div class="font-inter mt-64 p-2 grid grid-cols-2 gap-2
-            md:grid-cols-4 md:p-4">
+        <div class="font-inter mt-64 p-2 grid grid-cols-2 gap-4
+            md:grid-cols-4 md:p-4 ">
             <h2 class="text-xl h-15 font-semibold text-slate-700
                 md:col-start-4 md:row-start-2 md:flex">
                 <span class="self-center">
@@ -386,102 +381,68 @@
 
             <!-- untuk membuat animasi maka dikasih group element -->
             <!-- fungsi grup untuk menarger anak anak dari element paraemnt -->
-            <div class="bg-blue-500 h-15 aspect-[4/3] rounded-lg md:aspect-[3/4] 
-            lg:aspect-[4/3] xl:aspect-[4/4] overflow-hidden group relative hover:scale-95 transition-all duration-500">
-                <div class="w-full h-full bg-[url('https://source.unsplash.com/600x400?computer')] 
-                    bg-cover bg-center absolute group-hover:scale-125
-                    transition-all duration-500
-                    group-hover:rotate-12">
+            <div class="group grid-card">
+                <div class="grid-card-img bg-[url('https://source.unsplash.com/600x400?computer')] ">
 
                 </div>
             </div>
             
-            <div class="bg-blue-500 h-15 aspect-[4/3] rounded-lg md:aspect-[3/4] lg:aspect-[4/3] xl:aspect-[4/4] md:col-start-3
-            overflow-hidden group relative hover:scale-95 transition-all duration-500">
-                <div class="w-full h-full bg-[url('https://source.unsplash.com/600x400?internet')] 
-                bg-cover bg-center absolute group-hover:scale-125
-                transition-all duration-500
-                group-hover:rotate-12">
+            <div class=" group grid-card md:col-start-3">
+                <div class="grid-card-img bg-[url('https://source.unsplash.com/600x400?internet')] ">
+
+                </div>
+            </div>
+            
+            <div class="griup grid-card">
+                <div class="grid-card-img bg-[url('https://source.unsplash.com/600x400?computer')]">
+
+                </div>
+            </div>
+
+            <div class="group grid-card">
+                <div class="grid-card-img bg-[url('https://source.unsplash.com/600x400?laptop')]">
+
+                </div>
+            </div>
+
+            <div class="group grid-card">
+                <div class="grid-card-img bg-[url('https://source.unsplash.com/600x400?computer')]">
+
+                </div>
+            </div>
+            
+            <div class="group grid-card md:col-start-2">
+                <div class="grid-card-img  bg-[url('https://source.unsplash.com/600x400?laptop')]">
 
             </div>
             </div>
             
-            <div class="bg-blue-500 h-15 aspect-[4/3] rounded-lg md:aspect-[3/4] lg:aspect-[4/3] xl:aspect-[4/4]
-            overflow-hidden group relative hover:scale-95 transition-all duration-500">
-                <div class="w-full h-full bg-[url('https://source.unsplash.com/600x400?computer')] 
-                bg-cover bg-center absolute group-hover:scale-125
-                transition-all duration-500
-                group-hover:rotate-12">
-
-            </div>
-            </div>
-            <div class="bg-blue-500 h-15 aspect-[4/3] rounded-lg md:aspect-[3/4] lg:aspect-[4/3] xl:aspect-[4/4]
-            overflow-hidden group relative hover:scale-95 transition-all duration-500">
-                <div class="w-full h-full bg-[url('https://source.unsplash.com/600x400?laptop')] 
-                bg-cover bg-center absolute group-hover:scale-125
-                transition-all duration-500
-                group-hover:rotate-12">
-
-            </div>
-            </div>
-            <div class="bg-blue-500 h-15 aspect-[4/3] rounded-lg md:aspect-[3/4] lg:aspect-[4/3] xl:aspect-[4/4]
-            overflow-hidden group relative hover:scale-95 transition-all duration-500">
-                <div class="w-full h-full bg-[url('https://source.unsplash.com/600x400?computer')] 
-                bg-cover bg-center absolute group-hover:scale-125
-                transition-all duration-500
-                group-hover:rotate-12">
-
-            </div>
-            </div>
-            
-            <div class="bg-blue-500 h-15 aspect-[4/3] rounded-lg md:aspect-[3/4] lg:aspect-[4/3] xl:aspect-[4/4] md:col-start-2
-            overflow-hidden group relative hover:scale-95 transition-all duration-500">
-                <div class="w-full h-full bg-[url('https://source.unsplash.com/600x400?laptop')] 
-                bg-cover bg-center absolute group-hover:scale-125
-                transition-all duration-500
-                group-hover:rotate-12">
-
-            </div>
-            </div>
-            
-            <div class="bg-blue-500 h-15 aspect-[4/3] rounded-lg md:aspect-[3/4] lg:aspect-[4/3] xl:aspect-[4/4] md:col-start-4
-            overflow-hidden group relative hover:scale-95 transition-all duration-500">
-                <div class="w-full h-full bg-[url('https://source.unsplash.com/600x400?computer')] 
-                bg-cover bg-center absolute group-hover:scale-125
-                transition-all duration-500
-                group-hover:rotate-12">
+            <div class="group grid-card md:col-start-4">
+                <div class="grid-card-img bg-[url('https://source.unsplash.com/600x400?computer')]">
 
             </div>
             </div>
 
-            <div class="bg-blue-500 h-15 aspect-[4/3] rounded-lg md:aspect-[3/4] lg:aspect-[4/3] xl:aspect-[4/4]
-            overflow-hidden group relative hover:scale-95 transition-all duration-500">
-                <div class="w-full h-full bg-[url('https://source.unsplash.com/600x400?laptop')] 
-                bg-cover bg-center absolute group-hover:scale-125
-                transition-all duration-500
-                group-hover:rotate-12">
+            <div class="group grid-card">
+                <div class="bg-[url('https://source.unsplash.com/600x400?laptop')] grid-card-img">
+                </div>
+            </div>
+
+
+            <div class="group grid-card md:col-start-3">
+                <div class="grid-card-img bg-[url('https://source.unsplash.com/600x400?computer')]">
 
             </div>
             </div>
-            <div class="bg-blue-500 h-15 aspect-[4/3] rounded-lg md:aspect-[3/4] lg:aspect-[4/3] xl:aspect-[4/4] md:col-start-3
-            overflow-hidden group relative hover:scale-95 transition-all duration-500">
-                <div class="w-full h-full bg-[url('https://source.unsplash.com/600x400?computer')] 
-                bg-cover bg-center absolute group-hover:scale-125
-                transition-all duration-500
-                group-hover:rotate-12">
-
-            </div>
-            </div>
-            <div class="bg-blue-500 h-15 aspect-[4/3] rounded-lg md:aspect-[3/4] lg:aspect-[4/3] xl:aspect-[4/4] md:col-start-3
-            overflow-hidden group relative hover:scale-95 transition-all duration-500">
-                <div class="w-full h-full bg-[url('https://source.unsplash.com/600x400?laptop')] 
-                bg-cover bg-center absolute group-hover:scale-125
-                transition-all duration-500
-                group-hover:rotate-12">
+             
+            <div class="group grid-card md:col-start-3">
+                <div class="grid-card-img bg-[url('https://source.unsplash.com/600x400?computer')]">
 
             </div>
             </div>
         </div>
+
+        <h1>Hello</h1>
 
         
 

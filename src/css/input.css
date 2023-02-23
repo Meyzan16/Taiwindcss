@@ -1,3 +1,39 @@
-@tailwind base;
+@tailwind base; 
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; 
+
+
+/* mengurutkan sesuai layer base agar memliki style dasar */
+@layer base {
+    h1{
+        @apply text-6xl text-wpu;
+        /* color: theme(colors.wpu); */
+    }
+}
+
+/* untuk class yang berulang ulang maka silahkan membuat component */
+@layer components {
+    .grid-card {
+        @apply bg-blue-500  aspect-[4/3] rounded-lg md:aspect-[3/4] lg:aspect-[4/3] xl:aspect-[4/4]
+        overflow-hidden relative hover:scale-95 transition-all duration-500 lg:h-full lg:w-full
+    }
+
+    .grid-card-img {
+        @apply w-full h-full  
+        bg-cover bg-center absolute group-hover:scale-125
+        group-hover:rotate-12
+        transition-all duration-500
+    }
+}
+
+@layer utilities {
+    #toggle:checked ~ label div.toggle-circle 
+    {
+        @apply translate-x-4;
+    }
+}
+
+
+
+
+
